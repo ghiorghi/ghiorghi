@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ghiorghi</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Lexend:wght@100..900&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="inner-container">
+        <div class="header-container">
+            <a href="#ghiorghi" class="logo" style="text-decoration: none;">G</a>
+        </div>
+        <section class="section-1">
+            <div class="left">
+                <img class="main" src="./images/main2.jpg" alt="Big Image">
+            </div>
+            <div class="right">
+                <h1>Ghiorghi</h1>
+                <p>A me piace così.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <p style="font-size: 50px; text-align: center;  font-style: italic;">Più di quello che sei io non sarò, ..
+                neanche tu non sarai più di quello.</p>
+        </section>
+
+        <section id="ghiorghi" class="section-3">
+            <div style="color: white;">
+                <h2 class="section-title">Ora solo a te voglio parlare,
+                </h2>
+                <p class="section-subtitle">Ghiorghi.</p>
+            </div>
+
+            <div class="about-me">
+                <a href="#music">
+                    <h6>01</h6>
+                    <h3>Musica</h3>
+                </a>
+
+                <a href="#theater">
+                    <h6>02</h6>
+                    <h3>Teatro</h3>
+                </a>
+
+                <a href="#draw">
+                    <h6>03</h6>
+                    <h3>Pittura</h3>
+                </a>
+
+                <a href="#restoraunt">
+                    <h6>04</h6>
+                    <h3>Ristorazione</h3>
+                </a>
+            </div>
+        </section>
+
+        <section id="music" class="section-4">
+            <div style="color:black">
+                <h2 class="section-title">Musica</h2>
+                <div class="blog-container" style="justify-content: center;">
+                    <div class="blog-container-item" style="width: 70%;">
+                        <img src="./images/music.bmp" alt="Big Image"
+                            style="width: 100%; border-radius: 20px 20px 20px 20px;" onclick="openModal(this)">
+                        <p style="text-align: center;">È questo, sì, è questo, .. sentiva che gli parlava la voce da
+                            dentro. ...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="player">
+                <audio id="audioPlayer" src="./music.mp3"></audio>
+                <div class="controls">
+                    <button id="playButton" onclick="togglePlayPause()">Play</button>
+                    <button id="volumeButton" onclick="toggleMute()">Mute</button>
+                    <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1"
+                        onchange="adjustVolume()">
+                </div>
+            </div>
+        </section>
+
+        <section id="theater" class="section-4" style="background-color: black;">
+            <div style="color:white">
+                <h2 class="section-title">Teatro</h2>
+
+                <div class="blog-container" style="flex-direction: column;">
+                    <div class="theater-container-item">
+                        <img src="./images//theatre2.jpg" alt="Big Image" style="flex: 0 0 50%;
+                            margin-right: 20px;object-fit: contain; border-radius: 20px 20px 20px 20px;"
+                            onclick="openModal(this)">
+                        <p style="align-items: center;
+                        justify-content: center;
+                        display: flex;">"Io sono appassionato delle bombe, mi piacciono le bombe."</p>
+                    </div>
+
+                    <div class="theater-container-item">
+                        <img src="./images/theatre1.jpg" alt="Big Image" style="flex: 0 0 50%;
+                            margin-right: 20px; object-fit: contain; border-radius: 20px 20px 20px 20px;"
+                            onclick="openModal(this)">
+                        <p style="align-items: center;
+                        justify-content: center;
+                        display: flex;">"Sono qui, sono arrivato!"</p>
+                    </div>
+
+                    <div class="theater-container-item">
+                        <img src="./images/theatre3.jpg" alt="Big Image" style="flex: 0 0 50%;
+                            margin-right: 20px; object-fit: contain; border-radius: 20px 20px 20px 20px;"
+                            onclick="openModal(this)">
+                        <p style="align-items: center;
+                        justify-content: center;
+                        display: flex;">"Il meglio, deve ancora arrivare!"</p>
+                    </div>
+
+                    <div class="theater-container-item">
+                        <img src="./images/img4.jpg" alt="Big Image" style="flex: 0 0 50%;
+                            margin-right: 20px; object-fit: contain; border-radius: 20px 20px 20px 20px;"
+                            onclick="openModal(this)">
+                        <p style="align-items: center;
+                        justify-content: center;
+                        display: flex;">"Aspetta!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="draw" class="section" style="background-color: white;">
+            <div style="color:black">
+                <h2 class="section-title">Pittura</h2>
+
+                <div class="draw-container">
+                    <div class="draw-container-item">
+                        <img src="./images/draw2.jpg" alt="Big Image" style="margin-right: 20px; margin-bottom: 20px;width: 100%;
+                        height: 600px; border-radius: 20px 20px 20px 20px;" onclick="openModal(this)">
+                        <p style="text-align: center;">Il tramonto</p>
+                    </div>
+                    <div class="draw-container-item">
+                        <img src="./images/draw1.jpg" alt="Big Image" style="margin-right: 20px; margin-bottom: 20px;width: 100%;
+                        height: 600px; border-radius: 20px 20px 20px 20px;" onclick="openModal(this)">
+                        <p style="text-align: center;">Il corvo</p>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+
+        <section id="restoraunt" class="section-4" style="background-color: black;">
+            <div style="color:white">
+                <h2 class="section-title">Ristorazione</h2>
+
+                <div class="blog-container" style="justify-content: center;">
+                    <div class="blog-container-item" style="width: 70%;">
+                        <img src="./images/restoraunt.jpg" alt="Big Image"
+                            style="width: 100%; object-fit: cover; border-radius: 20px 20px 20px 20px;"
+                            onclick="openModal(this)">
+                        <p style="text-align: center;">E qui, era inevitabile il cambiamento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <p style="font-size: 50px; text-align: center; font-style: italic;">ecc. ecc. ecc.</p>
+        </section>
+
+        <footer class="footer">
+            <div class="form-section">
+                <h3>Contattami</h3>
+                <form action="/submit-form" method="post">
+                    <input type="text" name="name" placeholder="Nome" required>
+                    <input type="email" name="email" placeholder="Cognome" required>
+                    <textarea name="message" rows="4" placeholder="Messaggio" required></textarea>
+                    <input type="submit" value="Invia">
+                </form>
+            </div>
+            <div class="details">
+                <p><strong>Giorgi Kochua</strong></p>
+                <p>Email: <a href="mailto:your-email@example.com">giorgikochua@gmail.com</a></p>
+                <p>Telefono: <a href="tel:+1234567890">+ 39 327 750 8191</a></p>
+                <p>Indirizzo: Via dei filosofi 76, PG, Italia</p>
+                <p>Seguimi su:
+                    <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a> |
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+                    <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+                </p>
+            </div>
+        </footer>
+
+
+        <!-- Cookies Modal -->
+        <div id="cookiesModal" class="cookies-modal" style="display: flex; flex-direction: column;">
+            <div style="display: flex; flex-direction: row;">
+                <p>Utilizziamo i cookie per assicurarti la migliore esperienza sul nostro sito web. <a href="#">Scopri
+                        di
+                        più</a></p>
+                <div style="display: flex;">
+                    <button onclick="acceptCookies()">Accetta</button>
+                    <button onclick="declineCookies()">Rifiuta</button>
+                </div>
+            </div>
+
+
+
+            <div id="privacyPolicy" style="display: flex; align-items: center; margin-top: 10px;">
+                <input type="checkbox" id="privacyPolicyCheckbox" style="margin-right: 5px;">
+                <label for="privacyPolicyCheckbox">Accetto la <a href="privacy_policy_url">Privacy Policy</a></label>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <style>
+        .footer {
+            background-color: #000000;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid #333333;
+        }
+
+        .footer h3 {
+            margin-top: 0;
+            color: #ffffff;
+        }
+
+        .footer form {
+            margin: 20px 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer input[type="text"],
+        .footer input[type="email"],
+        .footer textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #333333;
+            background-color: #222222;
+            color: #ffffff;
+        }
+
+        .footer input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .footer input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .footer .details {
+            margin: 20px 0;
+            color: #cccccc;
+        }
+
+        .footer .details a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .footer .details a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .details p {
+            margin: 5px 0;
+        }
+
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 85%;
+            max-width: 800px;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+
+        /* Cookies Modal Styles */
+        .cookies-modal {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 600px;
+            background-color: #f1f1f1;
+            color: #333333;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            animation: slideUp 0.5s ease-out;
+            z-index: 1000;
+        }
+
+        .cookies-modal p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .cookies-modal button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-left: 10px;
+            border-radius: 20px;
+        }
+
+        .cookies-modal button:hover {
+            background-color: #0056b3;
+        }
+
+        .cookies-modal a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .cookies-modal a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translate(-50%, 20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translate(-50%, 0);
+                opacity: 1;
+            }
+        }
+    </style>
+
+    <script src="script.js"></script>
+</body>
+
+
+
+</html>
